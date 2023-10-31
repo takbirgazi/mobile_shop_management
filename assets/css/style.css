@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background: black;
+    color: white;
+}
+table{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.Header {
+    background: black;
+    border-bottom: 1px solid white;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.Header h2 {
+    font-size: 20px;
+    margin-top: 3px;
+}
+.Header h2 a{
+    text-decoration: none;
+    color: inherit;
+}
+.imgs {
+    width: 25px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+.headline {
+    background: black;
+    position: sticky;
+    top: 45px;
+    box-shadow: 2px 1px 10px 0px #ffffffb8;
+    z-index: 1;
+}
+.headline h4{
+    padding-left: 3px;
+    font-size: 20px;
+}
+.thead{
+    position: sticky;
+}
+.footer{
+    background: black;
+    height: 27px;
+}
+.footer a{
+    text-decoration: underline;
+    font-style: italic;
+    color: inherit;
+}
+.control_box {
+    display: none;
+    background: green;
+    position: absolute;
+    right: 5px;
+    top: 51px;
+    border-radius: 0px 0px 5px 5px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.active{
+    display: block;
+    opacity: 1;
+}
+.control_box ul {
+    width: 100%;
+    padding: 5px 40px 5px 5px;
+    margin: 0px;
+}
+.control_box ul li {
+    list-style: none;
+    margin: 10px 5px;
+    border-bottom: 1px solid #22ac22;
+}
+.control_box ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 20px;
+}
+
+/* Admin Page Desing  */
+
+.ad_dash_header {
+    border-bottom: 2px solid #ffffff82;
+    padding-bottom: 20px;
+}
+.ad_dash_header ul {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.ad_dash_header ul li {
+    list-style: none;
+    background: green;
+    padding: 5px;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+.add_phone_form{
+    max-width: 100%;
+}
+/* Dashbord CSS */
+.dash_add_usr .card p{
+    color: black;
+}
+.dash_add_usr .card a{
+    text-decoration: none;
+
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "serial_no" : "1",
+        "brand_name" : "Samsung",
+        "model_no" : "M30",
+        "retail_price" : "18000",
+        "customar_price" : "20000",
+        "category" : "Smart Phone"
+    },
+    {
+        "serial_no" : "2",
+        "brand_name" : "Tecno",
+        "model_no" : "Camon 20",
+        "retail_price" : "18000",
+        "customar_price" : "20000",
+        "category" : "Smart Phone"
+    },
+    {
+        "serial_no" : "3",
+        "brand_name" : "iTel",
+        "model_no" : "it2171",
+        "retail_price" : "1000",
+        "customar_price" : "1100",
+        "category" : "Button Phone"
+    }
+    
+]
