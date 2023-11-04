@@ -20,33 +20,38 @@ include_once("temp/header.php");
                         <th scope="col">Category</th>
                       </tr>
                     </thead>
-                    <tbody>
-
                         <?php   
                            if(file_exists('data/data.json')){
                             $curren_data= file_get_contents('data/data.json');
-                            if(!empty( $json_decode= json_decode($curren_data,true))){
+                            $json_decode= json_decode($curren_data,true);
+                            if(!empty($json_decode)){
+                                $index =1;
                                 foreach($json_decode as $value){
 
                           ?>
+                            <tbody>
                               <tr>
-                                <th scope="row"> <?php echo ($value['serial_no']);?> </th>
+                                <th scope="row"> <?php echo $index;?> </th>
                                 <td> <?php echo ($value['brand_name']);?> </td>
                                 <td> <?php echo ($value['model_no']);?> </td>
                                 <td> <?php echo ($value['retail_price']);?> </td>
                                 <td> <?php echo ($value['customar_price']);?> </td>
                                 <td> <?php echo ($value['category']);?> </td>
                               </tr>
-
+                            </tbody>
+                            
                       <?php 
-                          }}else{
+                          // S/N 
+                          $index ++;
+
+                          }
+                          
+                        }else{
                           echo"<p>No Data Found!</p>";
                           }
                         }
                       
-                      ?>
-            
-                    </tbody>
+                      ?>      
                   </table>
             </div>
         </section>

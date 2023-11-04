@@ -7,8 +7,7 @@ include_once("temp/header.php");
             <div class="ad_dash_header">
                 <ul>
                     <li> <a href="?id=admin">Admin Dashbord</a></li>
-                    <li> <a href="?id=button_phone">Add Button Phone</a></li>
-                    <li> <a href="?id=android_phone">Add Android Phone</a></li>
+                    <li> <a href="?id=add_phone">Add Phone</a></li>
                     <li> <a href="?id=brand_name">Add Brand Name</a></li>
                     <li> <a href="?id=ad_pwd_chng">Change My Password</a></li>
                     <li> <a href="?id=manage_phone&cat=mng_php">Manage Phone</a></li>
@@ -24,11 +23,8 @@ include_once("temp/header.php");
                     if($_GET['id']=="admin"){
                         include_once ("temp/dashbord.php");
                     }
-                    elseif($_GET['id']=="android_phone"){
-                        include_once ("temp/add_android_phone.php");
-                    }
-                    elseif($_GET['id']=="button_phone"){
-                        include_once ("temp/add_button_phone.php");
+                    elseif($_GET['id']=="add_phone"){
+                        include_once ("temp/add_phone.php");
                     }
                     elseif($_GET['id']=="brand_name"){
                         include_once ("temp/add_brand.php");

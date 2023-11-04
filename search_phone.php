@@ -17,146 +17,40 @@ include_once("temp/header.php");
                         <th scope="col">Model</th>
                         <th scope="col">RP</th>
                         <th scope="col">CP</th>
+                        <th scope="col">Category</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Tecno</td>
-                        <td>Camon 20Camon 20Camon 20Camon 20</td>
-                        <td>20000</td>
-                        <td>18900</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Infinix</td>
-                        <td>Hot 30i</td>
-                        <td>15000Camon 20Camon 20Camon 20</td>
-                        <td>12600</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>vivo</td>
-                        <td>Y17s</td>
-                        <td>15400Camon 20Camon 20</td>
-                        <td>16990</td>
-                      </tr>
+                    <?php   
+                           if(file_exists('data/data.json')){
+                            $curren_data= file_get_contents('data/data.json');
+                            $json_decode = json_decode($curren_data,true);                           
+                            if(!empty($json_decode)){
+                              $index = 1;
+                                foreach($json_decode as $value){
+                              if($value['model_no']== 'Camon 20'){
+                          ?>
+                            <tbody>
+                              <tr>
+                                <th scope="row"> <?php echo $index;?> </th>
+                                <td> <?php echo ($value['brand_name']);?> </td>
+                                <td> <?php echo ($value['model_no']);?> </td>
+                                <td> <?php echo ($value['retail_price']);?> </td>
+                                <td> <?php echo ($value['customar_price']);?> </td>
+                                <td> <?php echo ($value['category']);?> </td>
+                              </tr>
+                            </tbody>
 
-
-
-                    </tbody>
+                      <?php 
+                      // S/N 
+                      $index ++;
+                      }
+                        }
+                          }else{
+                          echo"<p>No Data Found!</p>";
+                          }
+                             }
+                      
+                      ?> 
                   </table>
             </div>
         </section>
