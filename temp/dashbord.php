@@ -4,18 +4,18 @@
             <h3>My Users</h3>
             <div class="card mb-2" style="width: 18rem;">
                 <div class="card-body">
+                    <p class="card-text">Role: <span>Admin</span></p>
                     <p class="card-text">Email: <span>takbirgazibd@gmail.com</span></p>
                     <p class="card-text">Password: <span>124563@#</span></p>
-                    <a href="#" class="card-link">Edit</a>
-                    <a href="#" class="card-link">Delete</a>
                 </div>
             </div>
             <div class="card mb-2" style="width: 18rem;">
                 <div class="card-body">
+                    <p class="card-text">Role: <span>User</span></p>
                     <p class="card-text">Email: <span>takbirgazibd@gmail.com</span></p>
                     <p class="card-text">Password: <span>124563@#</span></p>
-                    <a href="#" class="card-link">Edit</a>
-                    <a href="#" class="card-link">Delete</a>
+                    <a href="#" class="card-link text-success">Edit</a>
+                    <a href="#" class="card-link text-danger">Delete</a>
                 </div>
             </div>
     </div>

@@ -1,0 +1,20 @@
+[
+    {
+        "usr_id" : "1",
+        "usr_email" : "takbirgazi@gmail.com",
+        "usr_password" : "123456",
+        "usr_role" : "Admin"
+    },
+    {
+        "usr_id" : "2",
+        "usr_email" : "takbirgazi@gmail.com",
+        "usr_password" : "123456",
+        "usr_role" : "User"
+    },
+    {
+        "usr_id" : "3",
+        "usr_email" : "takbirgazibd@gmail.com",
+        "usr_password" : "123456",
+        "usr_role" : "User"
+    }
+]

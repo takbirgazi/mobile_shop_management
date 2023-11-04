@@ -50,4 +50,34 @@ $(document).ready(function(){
          }); 
     })
 
+    $("#usr_login_vrfy").click(function(event){
+        event.preventDefault();
+        let usr_email = $("#usr_log_email").val();
+        let usr_pwd = $("#usr_log_pwd").val();
+        $.ajax({
+            url : "functions/usr_log_in.php",
+            type : "POST",
+            data : {
+                usr_log_email : usr_email,
+                usr_log_pwd : usr_pwd,
+            },
+            success : function(data){
+                if(data == 1){
+                    window.location.href = "phone_list.php";
+                }else{
+                   // window.location.href = "index.php";
+                    $("#usr_error_cont").html("Please Wirte Your Currect Information!");
+                }
+            }
+        })
+    })
+
+
+
+
+
+
+
+
+
 })
