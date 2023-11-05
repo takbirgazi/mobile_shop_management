@@ -29,8 +29,8 @@
         <label class="mt-2">Category</label><br>
         <input id="phn_cat_nm" type="hidden">
             <div id="inpt_redio" class="my-2">
-                <input type="radio" name="phn_cat_nm" value="Android Phone">
-                <label class="mrg_right"  for="Android Phone">Android Phone</label>
+                <input type="radio" name="phn_cat_nm" value="Smart Phone">
+                <label class="mrg_right"  for="Smart Phone">Smart Phone</label>
                 <input  type="radio" name="phn_cat_nm" value="Button Phone">
                 <label for="Button Phone">Button Phone</label>
             </div>
