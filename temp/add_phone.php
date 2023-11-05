@@ -26,12 +26,14 @@
         </select>
 
         <div class="form-group">
-        <label for="inputState">Category</label>
-        <select id="phn_cat_nm" class="form-control">
-            <option disabled selected>Select Your Category</option>
-            <option value="Smart Phone">Android Phone</option>>
-            <option value="Button Phone">Button Phone</option>>
-        </select>
+        <label class="mt-2">Category</label><br>
+        <input id="phn_cat_nm" type="hidden">
+            <div id="inpt_redio" class="my-2">
+                <input type="radio" name="phn_cat_nm" value="Android Phone">
+                <label class="mrg_right"  for="Android Phone">Android Phone</label>
+                <input  type="radio" name="phn_cat_nm" value="Button Phone">
+                <label for="Button Phone">Button Phone</label>
+            </div>
         </div>
         <div class="form-group">
             <label for="inputZip">Model</label>

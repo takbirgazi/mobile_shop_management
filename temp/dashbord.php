@@ -2,22 +2,45 @@
 <div class="my-3 mb-5 add_phone_form">
     <div class="dash_add_usr my-3">
             <h3>My Users</h3>
-            <div class="card mb-2" style="width: 18rem;">
+
+<?php   
+    // User And Admin Data Showing
+    if(file_exists('data/user.json')){
+    $curren_data= file_get_contents('data/user.json');
+    $json_decode= json_decode($curren_data,true);
+    if(!empty($json_decode)){
+        foreach($json_decode as $value){
+            if($value['usr_role'] == "Admin"){
+
+                ?>
+                <!-- When Its Admin  -->
+                <div class="card mb-2" style="width: 18rem;">
                 <div class="card-body">
-                    <p class="card-text">Role: <span>Admin</span></p>
-                    <p class="card-text">Email: <span>takbirgazibd@gmail.com</span></p>
-                    <p class="card-text">Password: <span>124563@#</span></p>
+                    <p class="card-text">Role: <b><?php echo ($value['usr_role']);?></b></p>
+                    <p class="card-text">Email: <i><?php echo ($value['usr_email']);?></i></p>
+                    <p class="card-text">Password: <i><?php echo ($value['usr_password']);?></i></p>
                 </div>
             </div>
-            <div class="card mb-2" style="width: 18rem;">
+
+        <?php
+            }else{
+                ?>
+                <!-- When Its General User  -->
+                <div class="card mb-2" style="width: 18rem;">
                 <div class="card-body">
-                    <p class="card-text">Role: <span>User</span></p>
-                    <p class="card-text">Email: <span>takbirgazibd@gmail.com</span></p>
-                    <p class="card-text">Password: <span>124563@#</span></p>
+                    <p class="card-text">Role: <b><?php echo ($value['usr_role']);?></b></p>
+                    <p class="card-text">Email: <i><?php echo ($value['usr_email']);?></i></p>
+                    <p class="card-text">Password: <i><?php echo ($value['usr_password']);?></i></p>
                     <a href="#" class="card-link text-success">Edit</a>
                     <a href="#" class="card-link text-danger">Delete</a>
                 </div>
             </div>
+
+            <?php
+            }
+        }}}
+    ?>
+
     </div>
     <h3>Add New User</h3>
     <form>

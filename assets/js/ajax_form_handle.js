@@ -1,5 +1,6 @@
 // Ajax Form Handaling
 $(document).ready(function(){
+
     //Add Phone Brand Name Code
     $('#add_brand_phone').click(function(event){
         event.preventDefault();
@@ -22,8 +23,18 @@ $(document).ready(function(){
     })
 
     // Add Phone price Code "temp/add_phone.php"
+
+    // Set Category Value
+    const radioButton= $('#inpt_redio');
+       radioButton.change(function(e){
+       let tg_value= e.target.value;
+       $("#phn_cat_nm").val(tg_value);
+    })
+
+    // Upload Phone data
     $('#add_phone_price').click(function(event){
         event.preventDefault();
+
         let add_phone_name = $("#phn_bar_nm").val();
         let add_phone_category = $("#phn_cat_nm").val();
         let add_phone_model = $("#phn_model").val();
@@ -49,7 +60,7 @@ $(document).ready(function(){
                 }
          }); 
     })
-
+// User Log In Security Varyfy
     $("#usr_login_vrfy").click(function(event){
         event.preventDefault();
         let usr_email = $("#usr_log_email").val();
@@ -72,10 +83,27 @@ $(document).ready(function(){
         })
     })
 
-
-
-
-
+    //Admin Log In Security Varyfy
+    $("#admin_log_vrfy").click(function(event){
+        event.preventDefault();
+        let admin_email = $("#admin_log_email").val();
+        let admin_pwd = $("#admin_log_pwd").val();
+        $.ajax({
+            url : "functions/admin_log_in.php",
+            type : "POST",
+            data : {
+                admin_log_email : admin_email,
+                admin_log_pwd : admin_pwd,
+            },
+            success : function(data){
+                if(data == 1){
+                    window.location.href = "admin_dashbord.php?id=admin";
+                }else{
+                    $("#admin_error_cont").html("Please Wirte Your Currect Information!");
+                }
+            }
+        })
+    })
 
 
 
