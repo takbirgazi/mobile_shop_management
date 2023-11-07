@@ -104,7 +104,13 @@ $(document).ready(function(){
             }
         })
     })
+// Search File Handle
+$("#search_model").click(function(event){
+    event.preventDefault();
+    let find_model = $("#find_modl").val();
+    window.location.href = "search_phone.php?mdl="+find_model;
 
+})
 
 
 

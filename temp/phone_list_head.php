@@ -3,6 +3,6 @@
             <a href="button_phone.php" class="btn btn-success">Button Phone</a>
 </section>
 <section class="text-center py-2 d-flex gap-2">
-            <input class="form-control" type="text">
-            <a href="search_phone.php" class="btn btn-info">Search</a>
+            <input id="find_modl" class="form-control" type="text" placeholder='Write Your Model Name for Search like "Camon 20"'>
+            <a href="search_phone.php" id="search_model" class="btn btn-info">Search</a>
 </section>

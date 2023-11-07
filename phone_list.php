@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['usr_log'])){
+    $_SESSION['usr_log']='login_usr_id';
+}
 // Header File Include
 include_once("temp/header.php");
 ?>

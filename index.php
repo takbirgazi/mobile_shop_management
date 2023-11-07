@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+if(isset($_SESSION['usr_log'])){
+    if($_SESSION['usr_log']=='login_usr_id'){
+      header("Location: phone_list.php");
+    };
+}
 // Header File Include
 include_once("temp/header.php");
 ?>
@@ -20,6 +28,6 @@ include_once("temp/header.php");
         </section>
     </main>
 <?php
-// Footer File Include
+// Footer File Include 
 include_once("temp/footer.php");
-?>
+?> 
