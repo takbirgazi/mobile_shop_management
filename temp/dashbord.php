@@ -43,19 +43,20 @@
 
     </div>
     <h3>Add New User</h3>
+    <span id="usr_er_msg" class="text-danger"></span>
     <form>
         <div class="form-group">
-            <label for="inputZip">Email</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="Write User Email">
+            <label for="add_usr_email">Email</label>
+            <input required type="text" class="form-control" id="add_usr_email" placeholder="Write User Email">
         </div>
         <div class="form-group">
-            <label for="inputZip">Password</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="Write User Password">
+            <label for="add_usr_pwd">Password</label>
+            <input required type="text" class="form-control" id="add_usr_pwd" placeholder="Write User Password">
         </div>
         <div class="form-group">
-            <label for="inputZip">Confirm Password</label>
-            <input type="text" class="form-control" id="inputZip" placeholder="Write User Confirm Password">
+            <label for="add_usr_cp_pwd">Confirm Password</label>
+            <input required type="text" class="form-control" id="add_usr_cp_pwd" placeholder="Write User Confirm Password">
         </div>
-        <button type="submit" class="btn btn-primary mt-3">Add User</button>
+        <button id="add_usr_data" type="submit" class="btn btn-primary mt-3">Add User</button>
     </form>
 </div>

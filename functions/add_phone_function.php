@@ -13,7 +13,7 @@ if($_POST['add_new_phone_name']!="" && $_POST['add_new_phone_category']!="" && $
        $json_file= "../data/data.json";
        $curren_data= file_get_contents($json_file);
        $json_decode= json_decode($curren_data,true);
-       $brand_sl_no = count($json_decode)+1;
+       $brand_sl_no = rand(0,1000);
        $brand_str_sl = "$brand_sl_no";
        $new_data= array(
         "serial_no"      => $brand_str_sl,

@@ -112,6 +112,35 @@ $("#search_model").click(function(event){
 
 })
 
+// Add User Data 
+
+$("#add_usr_data").click(function(event){
+    event.preventDefault();
+    let ad_usr_email = $("#add_usr_email").val();
+    let ad_usr_pwd = $("#add_usr_pwd").val();
+    let ad_usr_cp_pwd = $("#add_usr_cp_pwd").val();
+        if(ad_usr_pwd !== ad_usr_cp_pwd){
+            $("#usr_er_msg").html("Password And Confirm Password Dosen't match!");
+        }else{
+    $.ajax({
+        url : "functions/add_usr_function.php",
+        type : "POST",
+        data : {
+            add_usr_email : ad_usr_email,
+            add_usr_pwd : ad_usr_pwd,
+
+                  },
+        success : function(data){
+                if(data==1){
+                    $("#usr_er_msg").html("New User Added");
+                }else{
+                    $("#usr_er_msg").html("New User Dosn't Added");
+                }
+        }
+    })}
+
+})
+
 
 
 })
