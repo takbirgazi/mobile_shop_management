@@ -31,6 +31,8 @@ include_once("temp/header.php");
                     }
                     elseif($_GET['id']=="ad_pwd_chng"){
                         include_once ("temp/admin_password.php");
+                    }elseif($_GET['id']== "edit_usr" && $_GET['usr_id_no']){
+                        include_once("dash_phone_manage/edit_usr.php");
                     }
                     elseif($_GET['id']=="manage_phone"){
                         // Manage Phone Page Navigation 
@@ -48,7 +50,7 @@ include_once("temp/header.php");
                         
                     }
                     else{
-                        header("location: admin.php");
+                       // header("location: admin.php");
                     }
                 }else{
                     header("location: admin2.php");
