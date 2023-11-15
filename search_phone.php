@@ -16,7 +16,7 @@ include_once("temp/header.php");
                         <th scope="col">Name</th>
                         <th scope="col">Model</th>
                         <th scope="col">RP</th>
-                        <th scope="col">CP</th>
+                        <th scope="col">MRP</th>
                         <th scope="col">Category</th>
                       </tr>
                     </thead>
@@ -28,7 +28,6 @@ include_once("temp/header.php");
         if(!empty($json_decode)){
           $index = 1;
             foreach($json_decode as $value){
-          // if($value['model_no']== 'Camon 20'){
           $my_model_data = $value['model_no'];
           $mydata = $_GET['mdl'];
           if(strstr(strtolower($my_model_data),strtolower($mydata))){

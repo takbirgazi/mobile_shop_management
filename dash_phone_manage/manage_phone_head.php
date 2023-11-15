@@ -3,6 +3,6 @@
             <a href="?id=manage_phone&cat=btn_phn" class="btn btn-success">Button Phone</a>
 </section>
 <section class="text-center py-2 d-flex gap-2">
-            <input class="form-control" type="text">
-            <a href="?id=manage_phone&cat=src_phn" class="btn btn-info">Search</a>
+            <input class="form-control" placeholder="Search Your Model Name" id="admin_find_modl" type="text">
+            <a href="?id=manage_phone&cat=src_phn" id="admin_search_model" class="btn btn-info">Search</a>
 </section>

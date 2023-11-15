@@ -111,6 +111,13 @@ $("#search_model").click(function(event){
     window.location.href = "search_phone.php?mdl="+find_model;
 
 })
+// Admin Search File Handle
+$("#admin_search_model").click(function(event){
+    event.preventDefault();
+    let find_model = $("#admin_find_modl").val();
+    window.location.href = "?id=manage_phone&cat=src_phn&mmdl="+find_model;
+
+})
 
 // Add User Data 
 
@@ -158,9 +165,9 @@ $("#update_usr_data").click(function(event){
         },
         success : function(data){
             if(data == 1){
-                $("#up_usr_er_msg").html("User Updated!");
+                $("#up_usr_er_msg").html("User Updated!"+data);
             }else{
-                $("#up_usr_er_msg").html("User Don't Updated!");
+                $("#up_usr_er_msg").html("User Don't Updated"+data+"!!");
             }
         }
     })

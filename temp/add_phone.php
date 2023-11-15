@@ -44,7 +44,7 @@
             <input type="number" class="form-control" id="phn_rp" placeholder="Write Your Retail Price Rate">
         </div>
         <div class="form-group">
-            <label for="inputZip">CP</label>
+            <label for="inputZip">MRP</label>
             <input type="number" class="form-control" id="phn_cp" placeholder="Write Your Customer Price Rate">
         </div>
         <button id="add_phone_price" type="submit" class="btn btn-primary mt-3">ADD</button>

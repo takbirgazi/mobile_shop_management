@@ -7,7 +7,7 @@ include_once("temp/header.php");
             <div class="ad_dash_header">
                 <ul>
                     <li> <a href="?id=admin">Admin Dashbord</a></li>
-                    <li> <a href="?id=add_phone">Add Phone</a></li>
+                    <li> <a href="?id=add_phone">Add New Phone</a></li>
                     <li> <a href="?id=brand_name">Add Brand Name</a></li>
                     <li> <a href="?id=ad_pwd_chng">Change My Password</a></li>
                     <li> <a href="?id=manage_phone&cat=mng_php">Manage Phone</a></li>

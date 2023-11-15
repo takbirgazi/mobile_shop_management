@@ -16,7 +16,7 @@ include_once("temp/header.php");
                         <th scope="col">Name</th>
                         <th scope="col">Model</th>
                         <th scope="col">RP</th>
-                        <th scope="col">CP</th>
+                        <th scope="col">MRP</th>
                         <th scope="col">Category</th>
                       </tr>
                     </thead>
