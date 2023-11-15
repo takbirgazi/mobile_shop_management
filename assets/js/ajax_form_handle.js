@@ -139,7 +139,8 @@ $("#add_usr_data").click(function(event){
                   },
         success : function(data){
                 if(data==1){
-                    $("#usr_er_msg").html("New User Added");
+                    $("#usr_er_msg").html("User Added successfully!");
+                    $("#ad_usr_phone_cnt_frm").trigger("reset");
                 }else{
                     $("#usr_er_msg").html("New User Dosn't Added");
                 }
