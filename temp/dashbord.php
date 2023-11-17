@@ -9,7 +9,9 @@
     $curren_data= file_get_contents('data/user.json');
     $json_decode= json_decode($curren_data,true);
     if(!empty($json_decode)){
+        $index = -1;
         foreach($json_decode as $value){
+            $index++;
             if($value['usr_role'] == "Admin"){
 
                 ?>
@@ -31,7 +33,7 @@
                     <p class="card-text">Role: <b><?php echo ($value['usr_role']);?></b></p>
                     <p class="card-text">Email: <i><?php echo ($value['usr_email']);?></i></p>
                     <p class="card-text">Password: <i><?php echo ($value['usr_password']);?></i></p>
-                    <a href="?id=edit_usr&usr_id_no=<?php echo ($value['usr_id']);?>" class="card-link text-success">Edit</a>
+                    <a href="?id=edit_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link text-success">Edit</a>
                     <a href="#" class="card-link text-danger">Delete</a>
                 </div>
             </div>

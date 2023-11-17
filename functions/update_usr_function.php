@@ -1,64 +1,33 @@
 <?php
-if(isset($_POST['up_usr_id'])){
-    $up_id = $_POST['up_usr_id'];
-    $up_email = $_POST['up_usr_email'];
-    $up_pwd = $_POST['up_usr_pwd'];
-    if(file_exists("../data/user.json")){
-        $json_file = "../data/user.json";
-        $current_data = file_get_contents($json_file);
-        $json_decode = json_decode($current_data,true);
-        if(!empty($json_decode)){
-            foreach($json_decode->faqitem as $key => $val){
-                if($val->usr_id == "$up_id") {
-                    $val->usr_email = $up_email;
-                    $val->usr_password = $up_pwd;
-                   
-                    $json_encode = json_encode($json_decode,JSON_PRETTY_PRINT);
-                    if(file_put_contents($json_file,$json_encode)){
-                        echo 1;
-                    }else{
-                        echo 0;
-                        }
+$sl = $_POST['index'];
+$usr_id = $_POST['up_usr_id'];
+$usr_email = $_POST['up_usr_email'];
+$usr_pwd = $_POST['up_usr_pwd'];
+if(file_exists("../data/user.json")){
+    $json_file = "../data/user.json";
+    $json_data = file_get_contents($json_file);
+    $decode_data = json_decode($json_data,true);
+    foreach($decode_data as $value){
+       // echo $value['usr_id']; 
+        if($value['usr_id'] == $usr_id){
+            $up_data = array(
+            // "usr_id" => $usr_id,
+            "usr_email" => $usr_email,
+            "usr_password" => $usr_pwd,
+            // "usr_role" => "User" 
+            );
+            $id = "$sl";
+            $rep_data = array_replace($value,$up_data);
+            $value = $rep_data;
+            $decode_data[$id] = $value ;
+            $json_encode = json_encode($decode_data,JSON_PRETTY_PRINT);
+            if(file_put_contents($json_file,$json_encode)){
+                echo 1;
+            }else{
+                echo 0;
+            }
+     }
+    }
+}
 
-
-                }
-             }
-
-
-
-
-
-
-
-
-
-            // foreach($json_decode as $value){
-            //     if($value['usr_id']=="$up_id"){
-            //         $new_data = array(
-            //             "usr_id"        => $up_id,
-            //             "usr_email"     => $up_email,
-            //             "usr_password"  => $up_pwd,
-            //             "usr_role"      => "User",
-            //         );
-            //         $json_decode[]=$new_data;
-            //         $json_encode = json_encode($json_decode,JSON_PRETTY_PRINT);
-            //         if(file_put_contents($json_file,$json_encode)){
-            //             echo 1;
-            //         }else{
-            //             echo 0;
-            //            }
-            //          } 
-            //      } 
-
-
-
-
-
-
-
-              } 
-            } 
-        }
-
-
-    ?>
+?>

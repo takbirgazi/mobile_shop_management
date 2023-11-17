@@ -154,27 +154,32 @@ $("#add_usr_data").click(function(event){
 $("#update_usr_data").click(function(event){
     event.preventDefault();
     let up_usr_id = $("#up_usr_id").val();
+    let index_id = $("#index_id").val();
     let up_usr_email = $("#up_usr_email").val();
     let up_usr_pwd = $("#up_usr_pwd").val();
+    
     $.ajax({
-        url : "functions/update_usr_function.php",
-        type : "POST",
-        data : {
-            up_usr_id : up_usr_id,
-            up_usr_email : up_usr_email,
-            up_usr_pwd : up_usr_pwd,
-        },
+        url     : "functions/update_usr_function.php",
+        type    : "POST",
+        data    : {
+                    index        : index_id,
+                    up_usr_id    : up_usr_id,
+                    up_usr_email : up_usr_email,
+                    up_usr_pwd   : up_usr_pwd,
+
+                    },
         success : function(data){
-            if(data == 1){
-                $("#up_usr_er_msg").html("User Updated!"+data);
+            if(data==1){
+                $("#up_usr_er_msg").html("User Data Updated");
             }else{
-                $("#up_usr_er_msg").html("User Don't Updated"+data+"!!");
+                $("#up_usr_er_msg").html("User Data Not Updated");
             }
         }
     })
 
 })
+//End
 
 
-
+//End
 })

@@ -1,22 +1,6 @@
 [
     {
-        "brand_serial_no" : "1",
-        "brand_brand_name" : "Samsung"
-    },
-    {
-        "brand_serial_no" : "2",
-        "brand_brand_name" : "iTel"
-    },
-    {
-        "brand_serial_no" : "3",
-        "brand_brand_name" : "Tecno"
-    },
-    {
-        "brand_serial_no" : "4",
-        "brand_brand_name" : "Infinix"
-    },
-    {
-        "brand_serial_no" : "5",
-        "brand_brand_name" : "Vivo"
-    } 
+        "brand_serial_no": "11",
+        "brand_brand_name": "Samsung"
+    }
 ]

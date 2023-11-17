@@ -1,6 +1,7 @@
       
     <?php
         if(isset($_GET['usr_id_no'])){
+            $index = $_GET['index'];
             if(file_exists("data/user.json")){
                 $json_file = "data/user.json";
                 $current_data = file_get_contents($json_file);
@@ -16,6 +17,7 @@
     <form>
         <div class="form-group">
             <input id="up_usr_id" type="hidden" value="<?php echo $value['usr_id'];?>">
+            <input id="index_id" type="hidden" value="<?php echo $index;?>">
             <label for="up_usr_email">Email</label>
             <input required type="text" class="form-control" id="up_usr_email" value="<?php echo $value['usr_email'];?>">
         </div>

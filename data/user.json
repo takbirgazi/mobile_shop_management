@@ -1,32 +1,26 @@
 [
     {
-        "usr_id" : "1",
-        "usr_email" : "takbirgazi@gmail.com",
-        "usr_password" : "123456",
-        "usr_role" : "Admin"
+        "usr_id": "1",
+        "usr_email": "takbirgazi@gmail.com",
+        "usr_password": "123456",
+        "usr_role": "Admin"
     },
     {
-        "usr_id" : "2",
-        "usr_email" : "takbirgazi@gmail.com",
-        "usr_password" : "123456",
-        "usr_role" : "User"
+        "usr_id": "69",
+        "usr_email": "takbirgazibd@gmail.com",
+        "usr_password": "1456ff",
+        "usr_role": "User"
     },
     {
-        "usr_id" : "3",
-        "usr_email" : "takbirgazibd@gmail.com",
-        "usr_password" : "123456",
-        "usr_role" : "User"
+        "usr_id": "61",
+        "usr_email": "takbirgazibd@gmail.com",
+        "usr_password": "1456g",
+        "usr_role": "User"
     },
     {
-        "usr_id" : "4",
-        "usr_email" : "abcd@gmail.com",
-        "usr_password" : "111111",
-        "usr_role" : "User"
-    },
-    {
-        "usr_id" : "5",
-        "usr_email" : "abcd@gmail.com",
-        "usr_password" : "111111",
-        "usr_role" : "User"
+        "usr_id": "45",
+        "usr_email": "takbirgazibd@gmail.com",
+        "usr_password": "ggghy",
+        "usr_role": "User"
     }
 ]
