@@ -26,17 +26,18 @@
                                 foreach($json_decode as $value){
 
                           ?>
-                            <tbody>
-                              <tr>
-                                <th scope="row"> <?php echo $index;?> </th>
-                                <td> <?php echo ($value['brand_name']);?> </td>
-                                <td> <?php echo ($value['model_no']);?> </td>
-                                <td> <?php echo ($value['retail_price']);?> </td>
-                                <td> <?php echo ($value['customar_price']);?> </td>
-                                <td> <?php echo ($value['category']);?> </td>
-                                <td><a href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a href="#">Delete</a></td>
-                              </tr>
-                            </tbody>
+                          <tbody>
+                          <tr>
+                            <th scope="row"> <?php echo $index;?> </th>
+                            <td> <?php echo ($value['brand_name']);?> </td>
+                            <td> <?php echo ($value['model_no']);?> </td>
+                            <td> <?php echo ($value['retail_price']);?> </td>
+                            <td> <?php echo ($value['customar_price']);?> </td>
+                            <td> <?php echo ($value['category']);?> </td>
+                            <td class="d-flex"><a class="btn btn-success" href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a class="btn btn-danger" href="#">Delete</a></td>
+                          </tr>
+                        </tbody>
+
                             
                       <?php 
                           // S/N 
