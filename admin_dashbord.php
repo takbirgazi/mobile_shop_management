@@ -11,6 +11,7 @@ include_once("temp/header.php");
                     <li> <a href="?id=brand_name">Add Brand Name</a></li>
                     <li> <a href="?id=ad_pwd_chng">Change My Password</a></li>
                     <li> <a href="?id=manage_phone&cat=mng_php">Manage Phone</a></li>
+                    <li> <a href="index.php">Goto Home Page</a></li>
                 </ul>
             </div>
         </section>

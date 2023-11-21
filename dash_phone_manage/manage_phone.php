@@ -1,9 +1,8 @@
 
     <main id="main" class="mx-2">
-        <?php include_once("manage_phone_head.php");?>
         <section>
             <div class="headline">
-                <h4 class="py-2">Latest</h4>
+                <h4 class="py-2">Manage Phone Details</h4>
             </div>
             <div class="table-responsive">
                 <table class="table table-bordered text-white mb-5">
@@ -35,7 +34,7 @@
                                 <td> <?php echo ($value['retail_price']);?> </td>
                                 <td> <?php echo ($value['customar_price']);?> </td>
                                 <td> <?php echo ($value['category']);?> </td>
-                                <td><a href="?id=manage_phone&cat=edit_phn">Edit</a> &nbsp; &nbsp; <a href="#">Delete</a></td>
+                                <td><a href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a href="#">Delete</a></td>
                               </tr>
                             </tbody>
                             

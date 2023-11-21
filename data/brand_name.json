@@ -2,5 +2,13 @@
     {
         "brand_serial_no": "11",
         "brand_brand_name": "Samsung"
+    },
+    {
+        "brand_serial_no": "69",
+        "brand_brand_name": "Walton"
+    },
+    {
+        "brand_serial_no": "3",
+        "brand_brand_name": "ZTE"
     }
 ]

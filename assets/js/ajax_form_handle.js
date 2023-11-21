@@ -180,6 +180,55 @@ $("#update_usr_data").click(function(event){
 })
 //End
 
+//Update Phone 
+
+// Set Category Value
+const upradioButton= $('#up_inpt_redio');
+upradioButton.change(function(e){
+let up_tg_value= e.target.value;
+$("#up_phn_cat_nm").val(up_tg_value);
+})
+
+$("#update_phone_price").click(function(event){
+    event.preventDefault();
+    let upd_phone_sl= $("#up_phn_sl").val();
+    let upd_sl_id= $("#up_phn_sl_id").val();
+    let upd_phone_name = $("#up_phn_bar_nm").val();
+    let upd_phone_category = $("#up_phn_cat_nm").val();
+    let upd_phone_model = $("#up_phn_model").val();
+    let upd_phone_rp = $("#up_phn_rp").val();
+    let upd_phone_cp = $("#up_phn_cp").val();
+    
+    $.ajax({
+        url  : "functions/update_phn_function.php",
+        type : "POST",
+        data : {
+            in_sl            : upd_phone_sl,
+            sl_id            : upd_sl_id,
+            phone_name       : upd_phone_name,
+            phone_category   : upd_phone_category,
+            phone_model      : upd_phone_model,
+            phone_rp         : upd_phone_rp,
+            phone_cp         : upd_phone_cp,
+             },
+        success : function(data){
+            if(data==1){
+                $("#up_phn_er_msg").html("Data Updated");
+            }else if(data==0){
+                $("#up_phn_er_msg").html("Data Not Updated");
+            }else{
+                $("#up_phn_er_msg").html(data);
+            }
+        }
+    })
+})
+
+//End
+
+
+
+
+
 
 //End
 })

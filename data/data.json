@@ -6,5 +6,37 @@
         "retail_price": "14500",
         "customar_price": "15000",
         "category": "Smart Phone"
+    },
+    {
+        "serial_no": "66",
+        "brand_name": "Samsung",
+        "model_no": "A14",
+        "retail_price": "12500",
+        "customar_price": "14500",
+        "category": "Smart Phone"
+    },
+    {
+        "serial_no": "582",
+        "brand_name": "Samsung",
+        "model_no": "Grue Music",
+        "retail_price": "1100",
+        "customar_price": "1200",
+        "category": "Button Phone"
+    },
+    {
+        "serial_no": "357",
+        "brand_name": "Samsung",
+        "model_no": "M31",
+        "retail_price": "20000",
+        "customar_price": "22000",
+        "category": "Smart Phone"
+    },
+    {
+        "serial_no": "419",
+        "brand_name": "Walton",
+        "model_no": "N71",
+        "retail_price": "11112",
+        "customar_price": "11222",
+        "category": "Smart Phone"
     }
 ]
