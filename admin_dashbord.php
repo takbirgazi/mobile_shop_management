@@ -34,12 +34,17 @@ include_once("temp/header.php");
                         include_once ("temp/admin_password.php");
                     }elseif($_GET['id']== "edit_usr" && $_GET['usr_id_no']){
                         include_once("dash_phone_manage/edit_usr.php");
+                    }elseif($_GET['id']== "dlt_usr" && $_GET['usr_id_no']){
+                        include_once("temp/dashbord.php");
                     }
                     elseif($_GET['id']=="manage_phone"){
                         // Manage Phone Page Navigation 
                         if($_GET['id']== "manage_phone" && $_GET['cat']=="mng_php"){
                             include_once ("dash_phone_manage/manage_phone.php");
-                        }elseif($_GET['id']== "manage_phone" && $_GET['cat']=="btn_phn"){
+                        }elseif($_GET['id']== "manage_phone" && $_GET['cat']=="dlt_phn"){
+                            include_once ("dash_phone_manage/manage_phone.php");
+                        }
+                        elseif($_GET['id']== "manage_phone" && $_GET['cat']=="btn_phn"){
                             include_once("dash_phone_manage/manage_button_phone.php");
                         }elseif($_GET['id']== "manage_phone" && $_GET['cat']=="android_phn"){
                             include_once("dash_phone_manage/manage_smart_phone.php");

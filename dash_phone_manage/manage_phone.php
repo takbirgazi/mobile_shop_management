@@ -1,3 +1,30 @@
+<?php
+// Data Delete Code Start
+$cnt = $_GET['sl'];
+$sl = ((int)$cnt -1);
+$sl_id = $_GET['slid'];
+
+if(file_exists("data/data.json")){
+    $json_file = "data/data.json";
+    $json_data = file_get_contents($json_file);
+    $decode_data = json_decode($json_data,true);
+    foreach($decode_data as $value){
+        if($value['serial_no'] == $sl_id){
+            
+            $id = "$sl";
+            unset($decode_data[$id]);
+            $json_array = array_values($decode_data);
+            $json_encode = json_encode($json_array, JSON_PRETTY_PRINT);
+            if(file_put_contents($json_file,$json_encode)){
+                echo "Data has been deleted!";
+            }else{
+                echo "Data has been not deleted!";
+            }
+     }
+    }
+}
+// Data Delete code End
+?>
 
     <main id="main" class="mx-2">
         <section>
@@ -34,7 +61,7 @@
                             <td> <?php echo ($value['retail_price']);?> </td>
                             <td> <?php echo ($value['customar_price']);?> </td>
                             <td> <?php echo ($value['category']);?> </td>
-                            <td class="d-flex"><a class="btn btn-success" href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a class="btn btn-danger" href="#">Delete</a></td>
+                            <td class="d-flex"><a class="btn btn-success" href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a onclick="return confirm('Are You Sure?')" class="btn btn-danger" href="?id=manage_phone&cat=dlt_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Delete</a></td>
                           </tr>
                         </tbody>
 

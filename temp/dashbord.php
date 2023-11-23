@@ -1,4 +1,29 @@
+<?php 
+// User Delete Code Start
+if(isset($_GET['usr_id_no'])){
+    $usr_id = $_GET['usr_id_no'];
+    $sl = $_GET['index'];
 
+    if(file_exists("data/user.json")){
+        $json_file = "data/user.json";
+        $json_data = file_get_contents($json_file);
+        $decode_data = json_decode($json_data,true);
+        foreach($decode_data as $value){
+            if($value['usr_id'] == $usr_id){
+                $id = "$sl";
+                unset($decode_data[$id]);
+                $json_encode = json_encode($decode_data,JSON_PRETTY_PRINT);
+                if(file_put_contents($json_file,$json_encode)){
+                    echo "User Data Is Deleted!";
+                }else{
+                    echo "User Data Is Not Deleted!";
+                }
+         }
+        }
+    }
+}
+// User Delete Code End
+?>
 <div class="my-3 mb-5 add_phone_form">
     <div class="dash_add_usr my-3">
             <h3>My Users</h3>
@@ -34,7 +59,7 @@
                     <p class="card-text">Email: <i><?php echo ($value['usr_email']);?></i></p>
                     <p class="card-text">Password: <i><?php echo ($value['usr_password']);?></i></p>
                     <a href="?id=edit_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link text-success">Edit</a>
-                    <a href="#" class="card-link text-danger">Delete</a>
+                    <a onclick="return confirm('Are You Sure?')" href="?id=dlt_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link text-danger">Delete</a>
                 </div>
             </div>
 

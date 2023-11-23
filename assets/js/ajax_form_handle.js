@@ -171,6 +171,7 @@ $("#update_usr_data").click(function(event){
         success : function(data){
             if(data==1){
                 $("#up_usr_er_msg").html("User Data Updated");
+                
             }else{
                 $("#up_usr_er_msg").html("User Data Not Updated");
             }
@@ -180,7 +181,7 @@ $("#update_usr_data").click(function(event){
 })
 //End
 
-//Update Phone 
+//Update Phone start
 
 // Set Category Value
 const upradioButton= $('#up_inpt_redio');
@@ -223,11 +224,41 @@ $("#update_phone_price").click(function(event){
     })
 })
 
-//End
+//Update Phone End
 
 
-
-
+//Update Admin Email And Password Code start
+$("#pwd_upd").click(function(event){
+    event.preventDefault();
+    let old_email = $("#upd_cr_email").val();
+    let new_email = $("#upd_new_email").val();
+    let old_pwd = $("#upd_cr_pwd").val();
+    let new_pwd = $("#upd_nw_pwd").val();
+    let cp_pwd = $("#upd_cp_pwd").val();
+    if(new_pwd == cp_pwd){
+        $.ajax({
+            url     : "functions/update_adm_pwd.php",
+            type    : "POST",
+            data    : {
+                old_email : old_email,
+                new_email : new_email,
+                old_pwd : old_pwd,
+                new_pwd : new_pwd
+            },
+            success : function(data){
+                if(data==1){
+                    $("#upd_msg").html("Information Updated!");
+                    $("#upd_frm").trigger("reset");
+                }else{
+                    $("#upd_msg").html("Please Write Your Correct Information");
+                }
+            }
+        })
+    }else{
+        $("#upd_msg").html("New Password And Confirm Password Not Match!");
+    }
+})
+//Update Admin Password End
 
 
 //End

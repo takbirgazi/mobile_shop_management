@@ -1,8 +1,8 @@
 [
     {
         "usr_id": "1",
-        "usr_email": "takbirgazi@gmail.com",
-        "usr_password": "123456",
+        "usr_email": "takbirgazibd@gmail.com",
+        "usr_password": "1122",
         "usr_role": "Admin"
     },
     {
@@ -15,12 +15,6 @@
         "usr_id": "61",
         "usr_email": "takbirgazi@gmail.com",
         "usr_password": "123456",
-        "usr_role": "User"
-    },
-    {
-        "usr_id": "45",
-        "usr_email": "takbirgazibd@gmail.com",
-        "usr_password": "112233",
         "usr_role": "User"
     }
 ]
