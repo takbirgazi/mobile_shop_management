@@ -1,5 +1,6 @@
 <?php
 // Data Delete Code Start
+if(isset($_GET['sl'])){
 $cnt = $_GET['sl'];
 $sl = ((int)$cnt -1);
 $sl_id = $_GET['slid'];
@@ -10,7 +11,7 @@ if(file_exists("data/data.json")){
     $decode_data = json_decode($json_data,true);
     foreach($decode_data as $value){
         if($value['serial_no'] == $sl_id){
-            
+
             $id = "$sl";
             unset($decode_data[$id]);
             $json_array = array_values($decode_data);
@@ -22,6 +23,7 @@ if(file_exists("data/data.json")){
             }
      }
     }
+}
 }
 // Data Delete code End
 ?>
@@ -61,22 +63,22 @@ if(file_exists("data/data.json")){
                             <td> <?php echo ($value['retail_price']);?> </td>
                             <td> <?php echo ($value['customar_price']);?> </td>
                             <td> <?php echo ($value['category']);?> </td>
-                            <td class="d-flex"><a class="btn btn-success" href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a onclick="return confirm('Are You Sure?')" class="btn btn-danger" href="?id=manage_phone&cat=dlt_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Delete</a></td>
+                            <td class="d-flex"><a class="btn btn-success" href="?id=manage_phone&cat=edit_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Edit</a> &nbsp; &nbsp; <a id="dlt_phn_clk" class="btn btn-danger" href="?id=manage_phone&cat=dlt_phn&slid=<?php echo $value['serial_no'];?>&sl=<?php echo $index;?>">Delete</a></td>
                           </tr>
                         </tbody>
 
-                            
+
                       <?php 
                           // S/N 
                           $index ++;
 
                           }
-                          
+
                         }else{
                           echo"<p>No Data Found!</p>";
                           }
                         }
-                      
+
                       ?>      
                   </table>
             </div>

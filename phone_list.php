@@ -29,6 +29,7 @@ include_once("temp/header.php");
                            if(file_exists('data/data.json')){
                             $curren_data= file_get_contents('data/data.json');
                             $json_decode= json_decode($curren_data,true);
+                            $json_decode = array_reverse($json_decode);
                             if(!empty($json_decode)){
                                 $index =1;
                                 foreach($json_decode as $value){

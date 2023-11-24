@@ -41,7 +41,7 @@ if(isset($_GET['usr_id_no'])){
 
                 ?>
                 <!-- When Its Admin  -->
-                <div class="card mb-2" style="width: 18rem;">
+                <div class="card mb-2">
                 <div class="card-body">
                     <p class="card-text">Role: <b><?php echo ($value['usr_role']);?></b></p>
                     <p class="card-text">Email: <i><?php echo ($value['usr_email']);?></i></p>
@@ -53,13 +53,13 @@ if(isset($_GET['usr_id_no'])){
             }else{
                 ?>
                 <!-- When Its General User  -->
-                <div class="card mb-2" style="width: 18rem;">
+                <div class="card mb-2" >
                 <div class="card-body">
                     <p class="card-text">Role: <b><?php echo ($value['usr_role']);?></b></p>
                     <p class="card-text">Email: <i><?php echo ($value['usr_email']);?></i></p>
                     <p class="card-text">Password: <i><?php echo ($value['usr_password']);?></i></p>
-                    <a href="?id=edit_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link text-success">Edit</a>
-                    <a onclick="return confirm('Are You Sure?')" href="?id=dlt_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link text-danger">Delete</a>
+                    <a href="?id=edit_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link btn btn-success">Edit</a>
+                    <a id="usr_dlt_clk" href="?id=dlt_usr&usr_id_no=<?php echo ($value['usr_id']);?>&index=<?php echo $index;?>" class="card-link btn btn-danger">Delete</a>
                 </div>
             </div>
 
@@ -69,7 +69,8 @@ if(isset($_GET['usr_id_no'])){
     ?>
 
     </div>
-    <h3>Add New User</h3>
+  <hr/>
+    <h3 class="mt-5">Add New User</h3>
     <span id="usr_er_msg" class="text-danger"></span>
     <form id="ad_usr_phone_cnt_frm">
         <div class="form-group">

@@ -6,14 +6,8 @@
         "usr_role": "Admin"
     },
     {
-        "usr_id": "69",
+        "usr_id": "4",
         "usr_email": "takbirgazibd@gmail.com",
-        "usr_password": "123456",
-        "usr_role": "User"
-    },
-    {
-        "usr_id": "61",
-        "usr_email": "takbirgazi@gmail.com",
         "usr_password": "123456",
         "usr_role": "User"
     }

@@ -6,3 +6,12 @@ let main = document.getElementById("main");
         tglBox.classList.toggle("active");
         main.addEventListener("click",()=>{tglBox.classList.remove("active")})
     })
+let usr_clk = document.getElementById("usr_dlt_clk");
+    usr_clk.addEventListener("click",function(e){
+    e.preventDefault();
+});
+
+let phn_clk = document.getElementById("dlt_phn_clk");
+    phn_clk.addEventListener("click",function(e){
+    e.preventDefault();
+});
